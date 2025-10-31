@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
+
 <body>
   <button id="modoOscuroToggle" class="modoOscuroBtn">🌙</button>
   <main class="container">
@@ -16,22 +18,29 @@
         <span class="material-icons">account_circle</span>
       </div>
       <h1>Iniciar sesión</h1>
+
       <form>
         <div class="input-group">
-          <input type="email" id="email" required />
-          <label for="email">Email institucional </label>
+          <input type="email" id="email" name="email" placeholder="tu@correo.edu.pe" required
+            pattern="[a-z0-9._%+-]+@+[a-z0-9.-]+\.[a-z]{2,}$" title="Ingresa un correo electrónico válido" />
+          <label for="email">Email institucional</label>
         </div>
+
         <div class="input-group">
-          <input type="password" id="password" required />
+          <input type="password" id="password" name="password" required minlength="6"
+            title="La contraseña debe tener al menos 6 caracteres" />
           <label for="password">Contraseña</label>
         </div>
+
         <div class="form-options">
           <a href="#" class="forgot-link">¿Olvidaste tu contraseña?</a>
         </div>
+
         <button type="submit" class="btn-primary">Entrar</button>
       </form>
     </div>
   </main>
+
 
   <script>
     // Modo oscuro toggle
@@ -58,4 +67,5 @@
     });
   </script>
 </body>
+
 </html>
